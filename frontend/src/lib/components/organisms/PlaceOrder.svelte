@@ -57,7 +57,7 @@
 				oninput={handleInput}
 				disabled={$submitOrder.isPending}
 				placeholder="Enter your fast food order here... (e.g., 2 VokerBurgers, 2 fries, 1 Coke)"
-				class="w-full min-h-[200px] p-4 mt-2 disabled: animate-pulse "
+				class="w-full min-h-[200px] p-4 mt-2"
 			/>
 			{#if $submitOrder.isPending}
 				<div
