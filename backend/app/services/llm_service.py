@@ -3,13 +3,15 @@ import json
 from fastapi import HTTPException
 from openai import OpenAI
 from schemas import InterpretedOrderResponse
-from services.order_storage import order_storage
 from settings import settings
+
+from .order_storage import OrderStorageService
 
 
 class LLMService:
-    def __init__(self):
+    def __init__(self, storage_service: OrderStorageService):
         self.client = OpenAI(api_key=settings.openai_api_key)
+        self.storage_service = storage_service
 
     def handle(self, message: str) -> InterpretedOrderResponse:
         try:
@@ -46,7 +48,7 @@ class LLMService:
 
     def _get_system_prompt(self) -> str:
         pending_orders_json = json.dumps(
-            [order.model_dump() for order in order_storage.get_pending_orders()],
+            [order.model_dump() for order in self.storage_service.get_pending_orders()],
             indent=2,
         )
 

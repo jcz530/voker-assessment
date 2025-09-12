@@ -29,7 +29,3 @@ class OrderStorageService:
                 order.canceled_at = datetime.datetime.now().isoformat()
                 return True
         return False
-
-
-# Singleton instance
-order_storage = OrderStorageService()
