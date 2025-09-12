@@ -4,7 +4,7 @@ from dependencies import get_interpret_order_message_service, get_order_storage_
 from fastapi import APIRouter, Depends
 from models import Order
 from schemas import CreateOrderRequest
-from services import CreateOrderService
+from services import InterpretOrderMessageService
 
 router = APIRouter(
     prefix="/orders",
@@ -22,6 +22,6 @@ async def indexOrders(storage=Depends(get_order_storage_service)):
 @router.post("/")
 async def createOrders(
     request: CreateOrderRequest,
-    service: CreateOrderService = Depends(get_interpret_order_message_service),
+    service: InterpretOrderMessageService = Depends(get_interpret_order_message_service),
 ):
     return service.handle(request.message)
