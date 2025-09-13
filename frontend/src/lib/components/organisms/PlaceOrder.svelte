@@ -36,12 +36,13 @@
 
 <div class="max-w-2xl mx-auto py-12">
 	<h1 class="text-3xl font-bold text-primary-500 text-center">
-		Welcome to <span class="bg-primary-500 px-2 text-4xl text-white inline-block skew-x-12"
+		Welcome to <span
+			class="bg-primary-500 px-2 text-4xl text-white inline-block skew-x-12 align-bottom"
 			>VokerBurger</span
 		>
 	</h1>
 	<h2
-		class="text-2xl text-center bg-gradient-to-br from-primary-400 to-primary-500 mt-4 text-primary-50"
+		class="text-2xl text-center bg-gradient-to-br from-primary-400 to-primary-500 mt-4 py-0.5 text-primary-50"
 	>
 		Home of the VokerBurger
 	</h2>
@@ -81,7 +82,7 @@
 			size="lg"
 			variant="default"
 		>
-			{$submitOrder.isPending ? 'Submitting...' : 'Submit Order'}
+			{$submitOrder.isPending ? 'Placing...' : 'Place Order'}
 		</Button>
 	</form>
 </div>

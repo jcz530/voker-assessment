@@ -10,11 +10,6 @@
 </script>
 
 <div class="space-y-4">
-	<div class="flex items-center gap-3">
-		<ClipboardList size={24} class="text-primary-500" />
-		<h2 class="text-2xl font-bold text-primary-500">Order History</h2>
-	</div>
-
 	{#if $ordersQuery.isPending}
 		<div class="flex items-center justify-center py-12">
 			<div class="animate-spin rounded-full h-8 w-8 border-b-2 border-slate-600"></div>
@@ -32,6 +27,10 @@
 			<p class="text-slate-500">Orders will appear here once you start placing them.</p>
 		</div>
 	{:else}
+		<div class="flex items-center gap-3">
+			<ClipboardList size={24} class="text-primary-500" />
+			<h2 class="text-2xl font-bold text-primary-500">Order History</h2>
+		</div>
 		<div class="bg-primary-50 rounded-lg border border-primary-200 overflow-hidden">
 			<div
 				class="grid grid-cols-3 gap-4 p-4 bg-primary-200 border-b border-slate-200 font-bold text-sm text-primary-600"

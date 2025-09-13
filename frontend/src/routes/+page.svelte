@@ -7,7 +7,7 @@
 
 <main class="bg-gradient-to-br from-red-50 to-red-100 border-red-200 min-h-screen">
 	<div class="container mx-auto px-4 py-8 space-y-8">
-		<div class="grid grid-cols-3 gap-12">
+		<div class="grid grid-cols-3 gap-4 md:gap-12">
 			<ItemTotalCard itemType={ItemType.BURGER} />
 			<ItemTotalCard itemType={ItemType.FRIES} />
 			<ItemTotalCard itemType={ItemType.DRINK} />

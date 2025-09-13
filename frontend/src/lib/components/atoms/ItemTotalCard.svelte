@@ -49,7 +49,7 @@
 </script>
 
 <div class={`relative overflow-hidden rounded-xl  p-6`}>
-	<div class="flex items-center justify-between">
+	<div class="flex flex-col md:flex-row items-center justify-between">
 		<div class="flex items-center gap-3">
 			<div class={`rounded-full p-2 bg-white/40 ${getIconColor(itemType)}`}>
 				{#if itemType === 'burger'}
