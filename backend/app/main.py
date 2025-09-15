@@ -19,12 +19,6 @@ app.add_middleware(
 
 app.include_router(orders.router)
 
-
-@app.get("/")
-async def hey():
-    return {"message": "Hello World"}
-
-
 if __name__ == "__main__":
     import uvicorn
 
