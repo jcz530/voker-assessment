@@ -8,9 +8,9 @@ To run locally, `OPENAI_API_KEY=` needs to be set in the `.env` in the backend f
 
 # Demo
 
-<video width="640" height="480" controls>
-    <source src="./voker-assessment-demo.mp4" type="video/mp4">
-</video>
+[demo](https://github.com/user-attachments/assets/8e0b50be-fca1-4d94-a1dd-18b58df83e1e)
+
+
 <br>
 <br>
 <br>
